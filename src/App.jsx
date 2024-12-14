@@ -1,11 +1,17 @@
-// import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Intro from './components/intro';
+import UserChoice from './components/userChoice';
+import Result from './components/Result';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <h1>Challenge your self against the computer</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/user-choice" element={<UserChoice />} />
+        <Route path="/result" element={<Result />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
